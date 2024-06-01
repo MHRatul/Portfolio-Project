@@ -1,5 +1,6 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 const Home = () => {
@@ -9,8 +10,8 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
 
           {/* text */}
-          <div className="mt-8 text-center xl:text-left">
-            <span className="text-xl:flex">Software Engineer</span>
+          <div className="text-center xl:text-left order-2 xl:order-none">
+            <span className="text-xl">Software Engineer</span>
             <h1 className="text-4xl h1 mb-6"> Hello I'm <br /> <span className="shadow-gray-500">Mahmudul Hassan</span> <br />
               <span className="text-accent text-pretty text-5xl xl:text-6xl"> Ratul</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">
@@ -29,17 +30,20 @@ const Home = () => {
 
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles={"flex gap-6"} iconStyles={"w-9 h-9 border border-accent rounded-full  flex justify-center items-center text-accent hover:bg-accent hover:text-primary duration-300"  }/>
+                <Social
+                  containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full
+                  flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary duration-300"  />
               </div>
             </div>
           </div>
 
           {/* photo */}
-          <div>
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };
