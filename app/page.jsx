@@ -11,10 +11,11 @@ const Home = () => {
 
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Engineer</span>
+            
             <h1 className="text-4xl h1 mb-6"> Hello I'm <br /> <span className="shadow-gray-500">Mahmudul Hassan</span> <br />
               <span className="text-accent text-pretty text-5xl xl:text-6xl"> Ratul</span></h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+              <span className="text-xl text-slate-400 italic">Web Developer</span>
+            <p className="max-w-[500px] leading-snug mb-9 gap-0 text-white/80">
               I excel at crafting elegant digital experiences that delight and inform. I am passionate about building excellent websites that improves the lives of those around me.
             </p>
 
