@@ -9,20 +9,20 @@ import { Description, Title } from "@radix-ui/react-dialog";
     Description: "A dedicated personality with comprehensive knowledge in planning, organizing and implementing, seeking a suitable position where this knowledge in sure to add value to the organization as well as my career. Proven ability to work independently and as part of a team to deliver projects on time",
     info: [
       {
-        fieldName: "Name",
+        fieldName: "Name:",
         fieldValue: "Mahmudul Hassan Ratul",
       },
       {
-        fieldName: "Phone",
+        fieldName: "Phone:",
         fieldValue: "01521431510",
       },
       {
-        fieldName: "Experience",
+        fieldName: "Experience:",
         fieldValue: "1 year+",
       },
       {
-        fieldName: "Email",
-        fieldValue: "mahmudulhassanratul.dev@gmail.com",
+        fieldName: "Email:",
+        fieldMail: "mahmudulhassanratul.dev@gmail.com",
       },
     ]
   };
@@ -248,8 +248,22 @@ import { Description, Title } from "@radix-ui/react-dialog";
             </TabsContent>
             
              {/* about */}
-             <TabsContent value="about" className="w-full">
-              About
+             <TabsContent value="about" className="w-full text center xl:text-left">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{about.Title}</h3>
+                <p className="max-w-[600px] text-white/60 max-auto xl:mx-0">{about.Description}</p>
+                <ul className="grid grid-cols-1  xl:grid-cols-2  gap-y-6 justify-center items-center max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li key={index} className="flex items-center justify-center xl:xl:justify-start gap-4">
+                        <span className='text-white/60'> {item.fieldName}</span>
+                        <span className='text-md'>{item.fieldValue}</span>
+                        <span className='text-md text-accent underline underline-offset-4'> <a href="mailto:" >{item.fieldMail}</a></span>
+                      </li>
+                    );
+                  })}
+                </ul>      
+              </div>
             </TabsContent>
           </div>
 
