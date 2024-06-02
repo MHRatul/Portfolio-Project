@@ -258,7 +258,7 @@ import { Description, Title } from "@radix-ui/react-dialog";
                       <li key={index} className="flex items-center justify-center xl:xl:justify-start gap-4">
                         <span className='text-white/60'> {item.fieldName}</span>
                         <span className='text-md'>{item.fieldValue}</span>
-                        <span className='text-md text-accent underline underline-offset-4'> <a href="mailto:" >{item.fieldMail}</a></span>
+                        <span className='text-md text-accent underline underline-offset-4'> <a href="mailto:">{item.fieldMail}</a></span>
                       </li>
                     );
                   })}
