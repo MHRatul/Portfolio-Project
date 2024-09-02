@@ -26,7 +26,9 @@ const Home = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2 "
               >
-                <span>Download CV</span>
+                <a href="https://drive.google.com/file/d/14cKdS4YOT_yBUxyVjzUzk-Nj1iCsI_Ad/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+                  Download CV
+                </a>
                 <FiDownload className="text-xl" />
 
               </Button>
